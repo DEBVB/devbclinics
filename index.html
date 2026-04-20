@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DE:BV Beach Doubles Training — Design C</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#080f1e;
+  --navy-2:#0b1f3a;
+  --navy-3:#112545;
+  --gold:#c9a84c;
+  --gold-dim:rgba(201,168,76,0.6);
+  --gold-glow:rgba(201,168,76,0.15);
+  --white:#fdfaf5;
+  --fog:rgba(253,250,245,0.55);
+  --fog-2:rgba(253,250,245,0.3);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Barlow',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 60px;display:flex;align-items:center;justify-content:space-between;}
+nav::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,15,30,0.95),transparent);pointer-events:none;z-index:-1;}
+.nav-brand{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--gold);letter-spacing:0.12em;}
+.nav-links{display:flex;gap:36px;align-items:center;}
+.nav-links a{font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--fog-2);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{color:var(--navy)!important;background:var(--gold);padding:9px 22px;border-radius:1px;font-weight:700!important;transition:background 0.2s!important;}
+.nav-cta:hover{background:#e8c97a!important;}
+
+/* HERO */
+.hero{min-height:100vh;position:relative;display:flex;flex-direction:column;justify-content:center;padding:140px 60px 80px;overflow:hidden;}
+
+/* Animated grid background */
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+.hero-grid::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 80% at 50% 50%,transparent 40%,var(--navy) 100%);pointer-events:none;}
+
+/* Glow orb */
+.hero-orb{position:absolute;top:-10%;right:10%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.08) 0%,transparent 70%);pointer-events:none;}
+
+.hero-inner{position:relative;z-index:2;max-width:900px;}
+.hero-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:28px;}
+.hero-eyebrow-line{width:40px;height:1px;background:var(--gold);}
+.hero-eyebrow-text{font-size:11px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);}
+.hero-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(72px,12vw,160px);line-height:0.85;letter-spacing:0.02em;margin-bottom:28px;}
+.hero-h1 .line1{color:var(--white);}
+.hero-h1 .line2{color:var(--gold);}
+.hero-h1 .line3{color:transparent;-webkit-text-stroke:1px rgba(253,250,245,0.2);}
+.hero-sub{font-size:16px;font-weight:300;line-height:1.75;color:var(--fog);max-width:520px;margin-bottom:52px;}
+.hero-sub strong{color:var(--white);font-weight:500;}
+.hero-cta-row{display:flex;gap:16px;align-items:center;}
+.cta-main{background:var(--gold);color:var(--navy);padding:15px 36px;font-size:11px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;text-decoration:none;border-radius:1px;transition:all 0.2s;}
+.cta-main:hover{background:#e8c97a;transform:translateY(-1px);}
+.cta-learn{font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--fog-2);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color 0.2s;}
+.cta-learn::after{content:'↓';transition:transform 0.2s;}
+.cta-learn:hover{color:var(--gold);}
+.cta-learn:hover::after{transform:translateY(3px);}
+
+/* TICKER STRIP */
+.ticker{background:var(--gold);padding:0;overflow:hidden;white-space:nowrap;}
+.ticker-inner{display:inline-flex;animation:ticker 20s linear infinite;}
+.ticker-item{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.2em;color:var(--navy);padding:12px 40px;border-right:1px solid rgba(11,31,58,0.2);}
+@keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* SECTIONS */
+section{padding:100px 60px;}
+.section-inner{max-width:1100px;margin:0 auto;}
+.tag{font-size:10px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:20px;}
+.tag::before{content:'';width:28px;height:1px;background:var(--gold);}
+.section-h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,6vw,72px);line-height:0.9;letter-spacing:0.02em;}
+
+/* ABOUT */
+.about{background:var(--navy-2);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:56px;}
+.about-text p{font-size:15px;line-height:1.85;color:var(--fog);margin-bottom:16px;}
+.about-text strong{color:var(--white);}
+.coach-block{background:var(--navy-3);border:1px solid rgba(201,168,76,0.12);border-radius:2px;padding:40px;}
+.coach-block-name{font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--white);line-height:1;letter-spacing:0.04em;}
+.coach-block-role{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-dim);margin-top:6px;margin-bottom:32px;}
+.coach-stat-row{display:flex;gap:0;border-top:1px solid rgba(201,168,76,0.1);}
+.coach-stat{flex:1;padding:20px 16px;}
+.coach-stat:not(:last-child){border-right:1px solid rgba(201,168,76,0.1);}
+.cs-num{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--gold);line-height:1;}
+.cs-label{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--fog-2);margin-top:4px;}
+
+/* CURRICULUM */
+.curriculum{background:var(--navy);}
+.block-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,0.08);margin-top:56px;}
+.bc{background:var(--navy);padding:40px 32px;position:relative;overflow:hidden;transition:background 0.3s;}
+.bc:hover{background:var(--navy-2);}
+.bc-corner{position:absolute;top:0;right:0;width:0;height:0;border-style:solid;border-width:0 40px 40px 0;border-color:transparent var(--navy-2) transparent transparent;transition:border-color 0.3s;}
+.bc:hover .bc-corner{border-color:transparent var(--navy-3) transparent transparent;}
+.bc-num{font-family:'Bebas Neue',sans-serif;font-size:80px;color:rgba(201,168,76,0.06);line-height:1;position:absolute;top:12px;right:16px;}
+.bc-time{font-size:10px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.bc-title{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:700;color:var(--white);margin-bottom:14px;letter-spacing:0.03em;}
+.bc-desc{font-size:13px;line-height:1.65;color:var(--fog);margin-bottom:20px;}
+.bc-tags{display:flex;flex-direction:column;gap:7px;}
+.bc-tag{font-size:11px;color:var(--gold-dim);display:flex;align-items:center;gap:8px;}
+.bc-tag::before{content:'';width:3px;height:3px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+
+/* PRICING */
+.pricing{background:var(--navy-2);}
+.pricing-split{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:56px;}
+.price-panel{border:1px solid rgba(201,168,76,0.12);padding:48px 40px;position:relative;overflow:hidden;border-radius:2px;transition:border-color 0.3s,transform 0.3s;}
+.price-panel:hover{border-color:rgba(201,168,76,0.4);transform:translateY(-2px);}
+.price-panel::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 100% 60% at 50% 0%,var(--gold-glow),transparent 60%);pointer-events:none;}
+.pp-type{font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+.pp-price{font-family:'Bebas Neue',sans-serif;font-size:88px;color:var(--white);line-height:1;margin-bottom:6px;}
+.pp-unit{font-size:12px;color:var(--fog-2);letter-spacing:0.1em;margin-bottom:36px;}
+.pp-features{display:flex;flex-direction:column;gap:12px;margin-bottom:40px;}
+.pp-f{font-size:14px;color:var(--fog);display:flex;gap:12px;align-items:flex-start;}
+.pp-f::before{content:'◆';color:var(--gold);font-size:6px;margin-top:6px;flex-shrink:0;}
+.pp-cta{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:15px;font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;border-radius:1px;transition:background 0.2s;}
+.pp-cta:hover{background:#e8c97a;}
+
+/* SCHEDULE TABLE */
+.schedule-section{background:var(--navy-3);}
+.sched-table{width:100%;border-collapse:collapse;margin-top:48px;}
+.sched-table thead th{text-align:left;padding:12px 20px;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid rgba(201,168,76,0.15);}
+.sched-table tbody td{padding:20px;font-size:14px;color:var(--fog);border-bottom:1px solid rgba(255,255,255,0.04);}
+.sched-table tbody tr:hover td{background:rgba(201,168,76,0.03);color:var(--white);}
+.sched-table tbody td:first-child{font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--gold);letter-spacing:0.08em;}
+.sched-table tbody td strong{color:var(--white);}
+
+/* LOCATIONS */
+.locations{background:var(--navy);}
+.loc-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px;}
+.lc{border:1px solid rgba(201,168,76,0.1);border-radius:2px;padding:32px 28px;transition:border-color 0.3s,background 0.3s;}
+.lc:hover{border-color:rgba(201,168,76,0.35);background:rgba(201,168,76,0.03);}
+.lc.primary{border-color:rgba(201,168,76,0.3);background:rgba(201,168,76,0.04);}
+.lc-badge{font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+.lc-name{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:700;color:var(--white);margin-bottom:4px;letter-spacing:0.02em;}
+.lc-addr{font-size:11px;color:var(--fog-2);margin-bottom:14px;}
+.lc-desc{font-size:13px;color:var(--fog);line-height:1.55;}
+
+/* FOOTER */
+footer{background:var(--navy-2);padding:40px 60px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(201,168,76,0.1);}
+.footer-brand{font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--gold);letter-spacing:0.1em;}
+.footer-sub{font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--fog-2);margin-top:2px;}
+.footer-link{font-size:12px;color:var(--fog-2);}
+.footer-link a{color:var(--gold);text-decoration:none;font-family:'Bebas Neue';font-size:18px;letter-spacing:0.06em;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.hero-eyebrow,.hero-h1,.hero-sub,.hero-cta-row{animation:fadeUp 0.7s ease both;}
+.hero-eyebrow{animation-delay:0.05s;}.hero-h1{animation-delay:0.2s;}.hero-sub{animation-delay:0.35s;}.hero-cta-row{animation-delay:0.5s;}
+
+@media(max-width:768px){
+  nav{padding:16px 24px;}
+  .nav-links{display:none;}
+  section,.hero{padding-left:24px;padding-right:24px;}
+  .about-grid,.pricing-split{grid-template-columns:1fr;}
+  .block-cards,.loc-cards{grid-template-columns:1fr;}
+  footer{flex-direction:column;gap:16px;text-align:center;padding:32px 24px;}
+  .hero-h1{font-size:clamp(60px,16vw,100px);}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">DE:BV</div>
+  <div class="nav-links">
+    <a href="#about">Coach</a>
+    <a href="#curriculum">Training</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#locations">Locations</a>
+    <a href="https://forms.gle/zLQFsLoHFxz461Mi7" class="nav-cta">Book Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-orb"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-line"></div>
+      <div class="hero-eyebrow-text">Chester County · Summer 2026</div>
+    </div>
+    <div class="hero-h1">
+      <div class="line1">Beach</div>
+      <div class="line2">Doubles</div>
+      <div class="line3">Training</div>
+    </div>
+    <p class="hero-sub">Private and partner sand coaching with the <strong>DE:BV head coach</strong>. Three one-hour blocks every <strong>Monday & Wednesday</strong> at Exton Park starting <strong>June 8.</strong></p>
+    <div class="hero-cta-row">
+      <a href="https://forms.gle/zLQFsLoHFxz461Mi7" class="cta-main">Book Your Block</a>
+      <a href="#curriculum" class="cta-learn">See what's covered</a>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <div class="ticker-item">Mon & Wed</div>
+    <div class="ticker-item">9 AM – Noon</div>
+    <div class="ticker-item">Starting June 8, 2026</div>
+    <div class="ticker-item">1 Player — $75</div>
+    <div class="ticker-item">2 Players — $100</div>
+    <div class="ticker-item">Exton Park Sand Courts</div>
+    <div class="ticker-item">No Walk-Ins</div>
+    <div class="ticker-item">DE:BV Beach Training</div>
+    <!-- duplicate for seamless loop -->
+    <div class="ticker-item">Mon & Wed</div>
+    <div class="ticker-item">9 AM – Noon</div>
+    <div class="ticker-item">Starting June 8, 2026</div>
+    <div class="ticker-item">1 Player — $75</div>
+    <div class="ticker-item">2 Players — $100</div>
+    <div class="ticker-item">Exton Park Sand Courts</div>
+    <div class="ticker-item">No Walk-Ins</div>
+    <div class="ticker-item">DE:BV Beach Training</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="tag">Your Coach</div>
+    <div class="section-h2">Built to Coach.<br>Here to Develop.</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Every session is led by <strong>Grant</strong>, the head coach of Downingtown East Boys Volleyball and an 8th grade history teacher at DEHS. He understands how athletes learn — not just how to perform, but how to actually absorb a skill and apply it under pressure.</p>
+        <p>With active connections across Chester County's boys and girls volleyball scene, he brings a competitive eye and a teaching-first approach to every block. Sessions are structured, purposeful, and tailored — no cookie-cutter drills.</p>
+        <p>Whether you're stepping on sand for the first time or preparing for a club season, the coaching meets you where you are and pushes you forward.</p>
+      </div>
+      <div class="coach-block">
+        <div class="coach-block-name">Grant</div>
+        <div class="coach-block-role">DE:BV Head Coach · DEHS Teacher</div>
+        <div class="coach-stat-row">
+          <div class="coach-stat"><div class="cs-num">D1</div><div class="cs-label">PIAA District</div></div>
+          <div class="coach-stat"><div class="cs-num">5-1</div><div class="cs-label">System</div></div>
+          <div class="coach-stat"><div class="cs-num">8+</div><div class="cs-label">Yrs Teaching</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section class="curriculum" id="curriculum">
+  <div class="section-inner">
+    <div class="tag">What's Covered</div>
+    <div class="section-h2">Three Blocks.<br>One Morning.</div>
+    <div class="block-cards">
+      <div class="bc">
+        <div class="bc-num">1</div>
+        <div class="bc-time">Block 1 · 9–10 AM</div>
+        <div class="bc-title">Foundation &amp; Movement</div>
+        <div class="bc-desc">Sand resets your base. Footwork, platform mechanics, and serve receive — the fundamentals that every other skill is built on.</div>
+        <div class="bc-tags">
+          <div class="bc-tag">Sand Footwork</div>
+          <div class="bc-tag">Platform Passing</div>
+          <div class="bc-tag">Serve & Receive</div>
+          <div class="bc-tag">Body Positioning</div>
+        </div>
+      </div>
+      <div class="bc">
+        <div class="bc-num">2</div>
+        <div class="bc-time">Block 2 · 10–11 AM</div>
+        <div class="bc-title">Attack &amp; Approach</div>
+        <div class="bc-desc">Sand demands arm discipline. Isolate your approach mechanics, arm swing, and shot decision-making — tip, roll, line, or angle.</div>
+        <div class="bc-tags">
+          <div class="bc-tag">Approach Mechanics</div>
+          <div class="bc-tag">Arm Swing</div>
+          <div class="bc-tag">Shot Selection</div>
+          <div class="bc-tag">Sand Setting</div>
+        </div>
+      </div>
+      <div class="bc">
+        <div class="bc-num">3</div>
+        <div class="bc-time">Block 3 · 11 AM–Noon</div>
+        <div class="bc-title">Doubles Systems</div>
+        <div class="bc-desc">Two people, completely different game. Coverage, blocking decisions, partner communication — applied in live doubles play every rep.</div>
+        <div class="bc-tags">
+          <div class="bc-tag">2-Person Coverage</div>
+          <div class="bc-tag">Blocking Decisions</div>
+          <div class="bc-tag">Communication</div>
+          <div class="bc-tag">Live Doubles Play</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="section-inner">
+    <div class="tag">Book a Block</div>
+    <div class="section-h2">Choose Your Format.</div>
+    <div class="pricing-split">
+      <div class="price-panel">
+        <div class="pp-type">Individual · Solo Player</div>
+        <div class="pp-price">$75</div>
+        <div class="pp-unit">Per one-hour block</div>
+        <div class="pp-features">
+          <div class="pp-f">Dedicated one-on-one coaching for the full hour</div>
+          <div class="pp-f">Drill selection tailored to your skill level and position</div>
+          <div class="pp-f">Mon & Wed · 9 AM–Noon · Starting June 8, 2026</div>
+          <div class="pp-f">Exton Park Sand Courts · Register by prior Sunday</div>
+        </div>
+        <a href="https://forms.gle/zLQFsLoHFxz461Mi7" class="pp-cta">Register Now</a>
+      </div>
+      <div class="price-panel">
+        <div class="pp-type">Partner · Two Players</div>
+        <div class="pp-price">$100</div>
+        <div class="pp-unit">Per one-hour block — $50 per player</div>
+        <div class="pp-features">
+          <div class="pp-f">Both players coached as a doubles pair simultaneously</div>
+          <div class="pp-f">Partner chemistry, communication, and live 2v2 reps</div>
+          <div class="pp-f">Mon & Wed · 9 AM–Noon · Starting June 8, 2026</div>
+          <div class="pp-f">Exton Park Sand Courts · Register by prior Sunday</div>
+        </div>
+        <a href="https://forms.gle/zLQFsLoHFxz461Mi7" class="pp-cta">Register Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="schedule-section" id="schedule">
+  <div class="section-inner">
+    <div class="tag">Daily Schedule</div>
+    <div class="section-h2">Morning Breakdown.</div>
+    <table class="sched-table">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Block</th>
+          <th>Focus</th>
+          <th>Format</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>9–10 AM</td>
+          <td><strong>Block 1</strong> — Foundation & Movement</td>
+          <td>Footwork · Platform · Serve Receive</td>
+          <td>Solo or Partner</td>
+        </tr>
+        <tr>
+          <td>10–11 AM</td>
+          <td><strong>Block 2</strong> — Attack & Approach</td>
+          <td>Approach · Arm Swing · Shot Selection</td>
+          <td>Solo or Partner</td>
+        </tr>
+        <tr>
+          <td>11–Noon</td>
+          <td><strong>Block 3</strong> — Doubles Systems</td>
+          <td>Coverage · Blocking · Live 2v2 Play</td>
+          <td>Partner Recommended</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section class="locations" id="locations">
+  <div class="section-inner">
+    <div class="tag">Where We Train</div>
+    <div class="section-h2">Sand Courts Across Chester County.</div>
+    <div class="loc-cards">
+      <div class="lc primary">
+        <div class="lc-badge">🥇 Primary Venue</div>
+        <div class="lc-name">Exton Park</div>
+        <div class="lc-addr">140 Church Farm Ln, Exton, PA</div>
+        <div class="lc-desc">West Whiteland Township sand volleyball court. Closest venue to Downingtown East — your home base for DE:BV summer training.</div>
+      </div>
+      <div class="lc">
+        <div class="lc-badge">🥈 West Chester</div>
+        <div class="lc-name">East Goshen Park</div>
+        <div class="lc-addr">1661 Paoli Pike, West Chester, PA</div>
+        <div class="lc-desc">Highly rated park (⭐ 4.8) with confirmed sand courts. Strong parking and facilities. West Chester area players' preferred site.</div>
+      </div>
+      <div class="lc">
+        <div class="lc-badge">➕ South County</div>
+        <div class="lc-name">Concord Township Park</div>
+        <div class="lc-addr">43 S. Thornton Rd, Glen Mills, PA</div>
+        <div class="lc-desc">Sand courts at the Concord Township Community Park. Serves Garnet Valley, Media, and Glen Mills corridor athletes.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <div class="footer-brand">DE:BV</div>
+    <div class="footer-sub">Downingtown East Boys Volleyball · Summer 2026</div>
+  </div>
+  <div class="footer-link">
+    Register at <br>
+    <a href="https://forms.gle/zLQFsLoHFxz461Mi7">forms.gle/zLQFsLoHFxz461Mi7</a>
+  </div>
+</footer>
+
+</body>
+</html>
