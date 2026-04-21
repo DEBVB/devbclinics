@@ -74,13 +74,17 @@ section{padding:100px 60px;}
 
 /* ABOUT */
 .about{background:var(--navy-2);}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:56px;}
+.about-grid{display:grid;grid-template-columns:5fr 7fr;gap:72px;align-items:start;margin-top:56px;}
+.about-photo{width:100%;display:block;border-radius:2px;object-fit:cover;object-position:top center;max-height:680px;}
 .about-text p{font-size:15px;line-height:1.85;color:var(--fog);margin-bottom:16px;}
 .about-text strong{color:var(--white);}
-.coach-block{background:var(--navy-3);border:1px solid rgba(201,168,76,0.12);border-radius:2px;padding:40px;}
-.coach-block-name{font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--white);line-height:1;letter-spacing:0.04em;}
-.coach-block-role{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-dim);margin-top:6px;margin-bottom:32px;}
-.coach-stat-row{display:flex;gap:0;border-top:1px solid rgba(201,168,76,0.1);}
+.coach-name{font-family:'Bebas Neue',sans-serif;font-size:56px;color:var(--white);line-height:1;letter-spacing:0.04em;margin-bottom:6px;}
+.coach-role{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:32px;}
+.coach-creds{display:flex;flex-direction:column;gap:10px;margin-top:32px;padding-top:28px;border-top:1px solid rgba(201,168,76,0.1);}
+.cred-row{display:flex;align-items:baseline;gap:14px;}
+.cred-year{font-size:10px;font-weight:700;letter-spacing:0.14em;color:var(--gold);min-width:80px;flex-shrink:0;}
+.cred-title{font-size:13px;color:var(--fog);}
+.coach-stat-row{display:flex;gap:0;border-top:1px solid rgba(201,168,76,0.1);margin-top:32px;}
 .coach-stat{flex:1;padding:20px 16px;}
 .coach-stat:not(:last-child){border-right:1px solid rgba(201,168,76,0.1);}
 .cs-num{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--gold);line-height:1;}
@@ -157,6 +161,7 @@ footer{background:var(--navy-2);padding:40px 60px;display:flex;align-items:cente
   .nav-links{display:none;}
   section,.hero{padding-left:24px;padding-right:24px;}
   .about-grid,.pricing-split{grid-template-columns:1fr;}
+  .about-photo{max-height:420px;}
   .slot-cards,.skills-grid,.loc-cards{grid-template-columns:1fr;}
   .skills-header{flex-direction:column;gap:12px;}
   footer{flex-direction:column;gap:16px;text-align:center;padding:32px 24px;}
@@ -228,18 +233,25 @@ footer{background:var(--navy-2);padding:40px 60px;display:flex;align-items:cente
     <div class="tag">Your Coach</div>
     <div class="section-h2">Built to Coach.<br>Here to Develop.</div>
     <div class="about-grid">
-      <div class="about-text">
-        <p>Every session is led by <strong>Grant</strong>, the head coach of Downingtown East Boys Volleyball and an 8th grade history teacher at DEHS. He understands how athletes learn — not just how to perform, but how to actually absorb a skill and apply it under pressure.</p>
-        <p>With active connections across Chester County's boys and girls volleyball scene, he brings a competitive eye and a teaching-first approach to every block. Sessions are structured, purposeful, and tailored — no cookie-cutter drills.</p>
-        <p>Whether you're stepping on sand for the first time or preparing for a club season, the coaching meets you where you are and pushes you forward.</p>
+      <div>
+        <img src="IMG_3727.JPEG" alt="Grant — DE:BV Head Coach" class="about-photo">
       </div>
-      <div class="coach-block">
-        <div class="coach-block-name">Grant</div>
-        <div class="coach-block-role">DE:BV Head Coach · DEHS Teacher</div>
+      <div class="about-text">
+        <div class="coach-name">Grant</div>
+        <div class="coach-role">Head Coach · DE Boys Volleyball · Royal Legends Club</div>
+        <p>Grant played three years as a <strong>varsity libero</strong> before continuing as a libero with <strong>Temple's club volleyball program</strong>. Time spent owning the back row — reading attacks, directing coverage, competing every rep — is the foundation everything he coaches comes from.</p>
+        <p>He started coaching at <strong>Council Rock North</strong> in 2021, working with both the boys and girls programs through 2023. He joined <strong>Downingtown East</strong> as girls assistant coach in 2023, then took over as <strong>head coach of the DE Boys</strong> program in 2024. He currently coaches with <strong>Royal Legends</strong> club as well.</p>
+        <p>Whether you're training for indoor 6s or developing your sand game, every session is structured, purposeful, and built around where you actually are — not a one-size-fits-all template.</p>
+        <div class="coach-creds">
+          <div class="cred-row"><span class="cred-year">2021–2023</span><span class="cred-title">Council Rock North — Assistant Coach, Boys &amp; Girls</span></div>
+          <div class="cred-row"><span class="cred-year">2023–2024</span><span class="cred-title">Downingtown East — Girls Assistant Coach</span></div>
+          <div class="cred-row"><span class="cred-year">2024–2026</span><span class="cred-title">Downingtown East — Boys Head Coach</span></div>
+          <div class="cred-row"><span class="cred-year">2025–Pres.</span><span class="cred-title">Royal Legends — Club Coach</span></div>
+        </div>
         <div class="coach-stat-row">
-          <div class="coach-stat"><div class="cs-num">D1</div><div class="cs-label">PIAA District</div></div>
-          <div class="coach-stat"><div class="cs-num">5-1</div><div class="cs-label">System</div></div>
-          <div class="coach-stat"><div class="cs-num">8+</div><div class="cs-label">Yrs Teaching</div></div>
+          <div class="coach-stat"><div class="cs-num">5+</div><div class="cs-label">Yrs Coaching</div></div>
+          <div class="coach-stat"><div class="cs-num">4</div><div class="cs-label">Programs</div></div>
+          <div class="coach-stat"><div class="cs-num">Libero</div><div class="cs-label">Playing Background</div></div>
         </div>
       </div>
     </div>
