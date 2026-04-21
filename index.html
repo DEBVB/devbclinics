@@ -88,18 +88,22 @@ section{padding:100px 60px;}
 
 /* CURRICULUM */
 .curriculum{background:var(--navy);}
-.block-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,0.08);margin-top:56px;}
-.bc{background:var(--navy);padding:40px 32px;position:relative;overflow:hidden;transition:background 0.3s;}
-.bc:hover{background:var(--navy-2);}
-.bc-corner{position:absolute;top:0;right:0;width:0;height:0;border-style:solid;border-width:0 40px 40px 0;border-color:transparent var(--navy-2) transparent transparent;transition:border-color 0.3s;}
-.bc:hover .bc-corner{border-color:transparent var(--navy-3) transparent transparent;}
-.bc-num{font-family:'Bebas Neue',sans-serif;font-size:80px;color:rgba(201,168,76,0.06);line-height:1;position:absolute;top:12px;right:16px;}
-.bc-time{font-size:10px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
-.bc-title{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:700;color:var(--white);margin-bottom:14px;letter-spacing:0.03em;}
-.bc-desc{font-size:13px;line-height:1.65;color:var(--fog);margin-bottom:20px;}
-.bc-tags{display:flex;flex-direction:column;gap:7px;}
-.bc-tag{font-size:11px;color:var(--gold-dim);display:flex;align-items:center;gap:8px;}
-.bc-tag::before{content:'';width:3px;height:3px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+.curriculum-sub{font-size:14px;color:var(--fog);margin-top:16px;margin-bottom:48px;max-width:560px;line-height:1.7;}
+.slot-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,0.08);}
+.sc{background:var(--navy);padding:36px 32px 32px;position:relative;overflow:hidden;transition:background 0.25s;}
+.sc:hover{background:var(--navy-2);}
+.sc-num{font-family:'Bebas Neue',sans-serif;font-size:88px;color:rgba(201,168,76,0.05);line-height:1;position:absolute;top:8px;right:14px;pointer-events:none;}
+.sc-time{font-family:'Bebas Neue',sans-serif;font-size:38px;color:var(--white);line-height:1;letter-spacing:0.03em;margin-bottom:10px;}
+.sc-label{font-size:10px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:20px;}
+.sc-cta{display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--navy);background:var(--gold);padding:8px 18px;border-radius:1px;}
+.skills-block{margin-top:64px;padding-top:56px;border-top:1px solid rgba(201,168,76,0.1);}
+.skills-header{display:flex;align-items:baseline;justify-content:space-between;gap:40px;margin-bottom:32px;flex-wrap:wrap;}
+.skills-eyebrow{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,44px);color:var(--white);letter-spacing:0.03em;flex-shrink:0;}
+.skills-note{font-size:13px;color:var(--fog);line-height:1.65;max-width:420px;}
+.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(201,168,76,0.07);}
+.sk{background:var(--navy);padding:18px 20px;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--fog);display:flex;align-items:center;gap:10px;transition:background 0.2s,color 0.2s;}
+.sk::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0;opacity:0.6;}
+.sk:hover{background:var(--navy-2);color:var(--white);}
 
 /* PRICING */
 .pricing{background:var(--navy-2);}
@@ -147,12 +151,14 @@ footer{background:var(--navy-2);padding:40px 60px;display:flex;align-items:cente
 .hero-eyebrow,.hero-h1,.hero-sub,.hero-cta-row{animation:fadeUp 0.7s ease both;}
 .hero-eyebrow{animation-delay:0.05s;}.hero-h1{animation-delay:0.2s;}.hero-sub{animation-delay:0.35s;}.hero-cta-row{animation-delay:0.5s;}
 
+@media(max-width:900px){.skills-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:768px){
   nav{padding:16px 24px;}
   .nav-links{display:none;}
   section,.hero{padding-left:24px;padding-right:24px;}
   .about-grid,.pricing-split{grid-template-columns:1fr;}
-  .block-cards,.loc-cards{grid-template-columns:1fr;}
+  .slot-cards,.skills-grid,.loc-cards{grid-template-columns:1fr;}
+  .skills-header{flex-direction:column;gap:12px;}
   footer{flex-direction:column;gap:16px;text-align:center;padding:32px 24px;}
   .hero-h1{font-size:clamp(60px,16vw,100px);}
 }
@@ -243,44 +249,47 @@ footer{background:var(--navy-2);padding:40px 60px;display:flex;align-items:cente
 <!-- CURRICULUM -->
 <section class="curriculum" id="curriculum">
   <div class="section-inner">
-    <div class="tag">What's Covered</div>
+    <div class="tag">Choose Your Block</div>
     <div class="section-h2">Three Time Slots.<br>One Morning.</div>
-    <div class="block-cards">
-      <div class="bc">
-        <div class="bc-num">1</div>
-        <div class="bc-time">Block 1 · 9–10 AM</div>
-        <div class="bc-desc">Every skill gets worked every session — footwork, passing, attacking, defense, and live game reps. Coaching adjusts to your position and level.</div>
-        <div class="bc-tags">
-          <div class="bc-tag">Sand Footwork</div>
-          <div class="bc-tag">Serve & Receive</div>
-          <div class="bc-tag">Attacking</div>
-          <div class="bc-tag">Defense</div>
-          <div class="bc-tag">Live Reps</div>
-        </div>
+    <p class="curriculum-sub">Each session runs one hour. Pick the slot that fits your schedule — coaching is the same across all three.</p>
+    <div class="slot-cards">
+      <div class="sc">
+        <div class="sc-num">1</div>
+        <div class="sc-time">9 – 10 AM</div>
+        <div class="sc-label">Block 1</div>
+        <div class="sc-cta">Pick this slot</div>
       </div>
-      <div class="bc">
-        <div class="bc-num">2</div>
-        <div class="bc-time">Block 2 · 10–11 AM</div>
-        <div class="bc-desc">Every skill gets worked every session — footwork, passing, attacking, defense, and live game reps. Coaching adjusts to your position and level.</div>
-        <div class="bc-tags">
-          <div class="bc-tag">Sand Footwork</div>
-          <div class="bc-tag">Serve & Receive</div>
-          <div class="bc-tag">Attacking</div>
-          <div class="bc-tag">Defense</div>
-          <div class="bc-tag">Live Reps</div>
-        </div>
+      <div class="sc">
+        <div class="sc-num">2</div>
+        <div class="sc-time">10 – 11 AM</div>
+        <div class="sc-label">Block 2</div>
+        <div class="sc-cta">Pick this slot</div>
       </div>
-      <div class="bc">
-        <div class="bc-num">3</div>
-        <div class="bc-time">Block 3 · 11 AM–Noon</div>
-        <div class="bc-desc">Every skill gets worked every session — footwork, passing, attacking, defense, and live game reps. Coaching adjusts to your position and level.</div>
-        <div class="bc-tags">
-          <div class="bc-tag">Sand Footwork</div>
-          <div class="bc-tag">Serve & Receive</div>
-          <div class="bc-tag">Attacking</div>
-          <div class="bc-tag">Defense</div>
-          <div class="bc-tag">Live Reps</div>
-        </div>
+      <div class="sc">
+        <div class="sc-num">3</div>
+        <div class="sc-time">11 AM – Noon</div>
+        <div class="sc-label">Block 3</div>
+        <div class="sc-cta">Pick this slot</div>
+      </div>
+    </div>
+    <div class="skills-block">
+      <div class="skills-header">
+        <div class="skills-eyebrow">What Gets Worked</div>
+        <p class="skills-note">Every session draws from this skill pool — mix varies by player, position, and where you need the most development.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="sk">Sand Footwork</div>
+        <div class="sk">Platform Passing</div>
+        <div class="sk">Serve &amp; Receive</div>
+        <div class="sk">Body Positioning</div>
+        <div class="sk">Approach Mechanics</div>
+        <div class="sk">Arm Swing</div>
+        <div class="sk">Shot Selection</div>
+        <div class="sk">Sand Setting</div>
+        <div class="sk">Defensive Digging</div>
+        <div class="sk">Transition Play</div>
+        <div class="sk">Blocking</div>
+        <div class="sk">Live Game Reps</div>
       </div>
     </div>
   </div>
@@ -323,34 +332,30 @@ footer{background:var(--navy-2);padding:40px 60px;display:flex;align-items:cente
 <!-- SCHEDULE -->
 <section class="schedule-section" id="schedule">
   <div class="section-inner">
-    <div class="tag">Daily Schedule</div>
+    <div class="tag">Session Times</div>
     <div class="section-h2">Morning Breakdown.</div>
     <table class="sched-table">
       <thead>
         <tr>
           <th>Time</th>
           <th>Block</th>
-          <th>Focus</th>
           <th>Format</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>9–10 AM</td>
+          <td>9 – 10 AM</td>
           <td><strong>Block 1</strong></td>
-          <td>Footwork · Serve Receive · Attacking · Defense · Live Reps</td>
           <td>Solo or Partner</td>
         </tr>
         <tr>
-          <td>10–11 AM</td>
+          <td>10 – 11 AM</td>
           <td><strong>Block 2</strong></td>
-          <td>Footwork · Serve Receive · Attacking · Defense · Live Reps</td>
           <td>Solo or Partner</td>
         </tr>
         <tr>
-          <td>11–Noon</td>
+          <td>11 AM – Noon</td>
           <td><strong>Block 3</strong></td>
-          <td>Footwork · Serve Receive · Attacking · Defense · Live Reps</td>
           <td>Solo or Partner</td>
         </tr>
       </tbody>
