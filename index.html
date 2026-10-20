@@ -3,417 +3,682 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DE:BV Sand Volleyball Training</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --navy:#080f1e;
-  --navy-2:#0b1f3a;
-  --navy-3:#112545;
-  --gold:#c9a84c;
-  --gold-dim:rgba(201,168,76,0.6);
-  --gold-glow:rgba(201,168,76,0.15);
-  --white:#fdfaf5;
-  --fog:rgba(253,250,245,0.55);
-  --fog-2:rgba(253,250,245,0.3);
+<title>Volleyball Clinics in Exton, PA — DEVB Sand Training</title>
+<meta name="description" content="Beach volleyball lessons in Chester County with Downingtown East head coach Grant Shieh. Solo $75 or partner $100 per hour at Exton Park, Exton, PA.">
+<meta name="author" content="Downingtown East Boys Volleyball">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0e1e45">
+<link rel="canonical" href="https://debvb.github.io/devbclinics/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DEVB Clinics — Sand Volleyball Training in Exton, PA">
+<meta property="og:description" content="Private one-hour sand volleyball blocks with Downingtown East head coach Grant Shieh. Solo or partner, Mon &amp; Wed at Exton Park.">
+<meta property="og:image" content="https://debvb.github.io/devbclinics/social-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Players go up for a block at a Downingtown East volleyball session">
+<meta property="og:url" content="https://debvb.github.io/devbclinics/">
+<meta property="og:site_name" content="Downingtown East Boys Volleyball">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@devbboys">
+<meta name="twitter:title" content="DEVB Clinics — Sand Volleyball Training in Exton, PA">
+<meta name="twitter:description" content="Private one-hour sand volleyball blocks with Downingtown East head coach Grant Shieh. Solo or partner, Mon &amp; Wed at Exton Park.">
+<meta name="twitter:image" content="https://debvb.github.io/devbclinics/social-card.jpg">
+<!-- Icons and the DE mark live in the main site repo (DEBVB.github.io) -->
+<link rel="icon" type="image/x-icon" href="https://debvb.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="192x192" href="https://debvb.github.io/icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://debvb.github.io/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Graduate&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SportsActivityLocation",
+      "@id": "https://debvb.github.io/devbclinics/#clinics",
+      "name": "DEVB Clinics",
+      "alternateName": "Downingtown East Volleyball Clinics",
+      "description": "Private sand and indoor volleyball coaching in Exton, Pennsylvania with Downingtown East head boys volleyball coach Grant Shieh. One-hour solo and partner blocks at Exton Park.",
+      "url": "https://debvb.github.io/devbclinics/",
+      "image": "https://debvb.github.io/devbclinics/social-card.jpg",
+      "logo": "https://debvb.github.io/downingtown-east-volleyball-logo.png",
+      "priceRange": "$50–$75",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "140 Church Farm Ln",
+        "addressLocality": "Exton",
+        "addressRegion": "PA",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Chester County, Pennsylvania" },
+        { "@type": "City", "name": "Exton, Pennsylvania" },
+        { "@type": "City", "name": "Downingtown, Pennsylvania" },
+        { "@type": "City", "name": "West Chester, Pennsylvania" }
+      ],
+      "parentOrganization": {
+        "@type": "SportsTeam",
+        "@id": "https://debvb.github.io/#team",
+        "name": "Downingtown East Boys Volleyball",
+        "url": "https://debvb.github.io/"
+      },
+      "employee": {
+        "@type": "Person",
+        "@id": "https://debvb.github.io/coaches.html#shieh",
+        "name": "Grant Shieh",
+        "jobTitle": "Head Coach",
+        "url": "https://debvb.github.io/coaches.html"
+      },
+      "makesOffer": [
+        { "@type": "Offer", "name": "Individual block — one player, one hour", "price": "75", "priceCurrency": "USD", "url": "https://forms.gle/zLQFsLoHFxz461Mi7" },
+        { "@type": "Offer", "name": "Partner block — two players, one hour", "price": "100", "priceCurrency": "USD", "url": "https://forms.gle/zLQFsLoHFxz461Mi7" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Downingtown East Boys Volleyball", "item": "https://debvb.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "DEVB Clinics", "item": "https://debvb.github.io/devbclinics/" }
+      ]
+    }
+  ]
 }
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:'Barlow',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden;}
+</script>
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 60px;display:flex;align-items:center;justify-content:space-between;}
-nav::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,15,30,0.95),transparent);pointer-events:none;z-index:-1;}
-.nav-brand{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--gold);letter-spacing:0.12em;}
-.nav-links{display:flex;gap:36px;align-items:center;}
-.nav-links a{font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--fog-2);text-decoration:none;transition:color 0.2s;}
-.nav-links a:hover{color:var(--gold);}
-.nav-cta{color:var(--navy)!important;background:var(--gold);padding:9px 22px;border-radius:1px;font-weight:700!important;transition:background 0.2s!important;}
-.nav-cta:hover{background:#e8c97a!important;}
+<style>
+/* =============================================================================
+   DEVB Clinics  ·  single-page site, served at debvb.github.io/devbclinics/
+   Tokens, nav, footer, section heads, and buttons are copied from the main
+   site (DEBVB.github.io: assets/css/site.css + index.css). When the main
+   site's look changes, mirror it here.
+   ========================================================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --ink: #0d0f14; --navy: #0e1e45; --gold: #e8b000; --gold-light: #fdf3d0;
+  --cream: #faf8f3; --white: #ffffff; --rule: #d4cec3; --muted: #7a7266; --soft: #f2f0ea;
+  --shadow-card: 0 1px 3px rgba(13,15,20,0.07), 0 4px 12px rgba(13,15,20,0.06);
+  --shadow-card-hover: 0 4px 16px rgba(13,15,20,0.12), 0 1px 3px rgba(13,15,20,0.06);
+  --radius-sm: 4px; --radius-md: 8px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); min-height: 100vh; }
 
-/* HERO */
-.hero{min-height:100vh;position:relative;display:flex;flex-direction:column;justify-content:center;padding:140px 60px 80px;overflow:hidden;}
+/* ── Skip link ───────────────────────────────────────────────────── */
+.skip-link { position: absolute; left: 8px; top: -48px; z-index: 300; background: var(--navy); color: var(--white); font-size: 13px; font-weight: 600; padding: 10px 18px; border-radius: 0 0 var(--radius-sm) var(--radius-sm); text-decoration: none; transition: top 0.15s; }
+.skip-link:focus { top: 0; }
 
-/* Animated grid background */
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
-.hero-grid::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 80% at 50% 50%,transparent 40%,var(--navy) 100%);pointer-events:none;}
+/* ── Nav ─────────────────────────────────────────────────────────── */
+.nav-wrap { background: var(--white); border-bottom: 1px solid var(--rule); box-shadow: 0 1px 0 var(--rule), 0 2px 8px rgba(13,15,20,0.06); position: sticky; top: 0; z-index: 200; }
+.nav-inner { padding: 0 48px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+.nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+.nav-brand img { height: 40px; width: auto; object-fit: contain; }
+.nav-brand-text { display: flex; flex-direction: column; line-height: 1; }
+.nav-brand-kicker { font-family: 'JetBrains Mono', monospace; font-size: 8.5px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--muted); }
+.nav-brand-name { font-family: 'Graduate', serif; font-weight: 400; font-synthesis: none; font-size: 16px; text-transform: uppercase; letter-spacing: 0.02em; color: var(--navy); margin-top: 5px; }
+.nav-links { display: flex; align-items: center; }
+.nav-links a { font-size: 11px; font-weight: 600; color: var(--muted); text-decoration: none; padding: 5px 12px; border-radius: var(--radius-sm); text-transform: uppercase; letter-spacing: 0.08em; transition: color 0.12s, background 0.12s; white-space: nowrap; }
+.nav-links a:hover { color: var(--ink); background: var(--soft); }
+.nav-cta { background: var(--gold) !important; color: var(--ink) !important; border-radius: var(--radius-sm) !important; margin-left: 6px; }
+.nav-cta:hover { background: #d4a000 !important; }
+.nav-burger { display: none; background: none; border: none; cursor: pointer; color: var(--navy); padding: 6px; border-radius: 6px; transition: background 0.12s; -webkit-tap-highlight-color: transparent; }
+.nav-burger:hover { background: var(--soft); }
+.nav-drawer { display: none; flex-direction: column; border-top: 1px solid var(--rule); }
+.nav-drawer.open { display: flex; }
+.nav-drawer a { display: block; padding: 15px 20px; font-size: 13px; font-weight: 600; color: var(--ink); text-decoration: none; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--rule); transition: background 0.12s; }
+.nav-drawer a:last-child { border-bottom: none; }
+.nav-drawer a:hover { background: var(--soft); }
+.nav-drawer .nav-cta-mobile { background: var(--gold); color: var(--ink) !important; font-weight: 700; }
 
-/* Glow orb */
-.hero-orb{position:absolute;top:-10%;right:10%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.08) 0%,transparent 70%);pointer-events:none;}
+/* ── Section shell + headers ─────────────────────────────────────── */
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+.sec { padding: 64px 0 68px; border-top: 1px solid var(--rule); scroll-margin-top: 56px; }
+.sec-white { background: var(--white); }
+.sec-cream { background: var(--cream); }
+.sec-head { margin-bottom: 28px; }
+.sec-kicker { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; display: flex; align-items: center; gap: 9px; }
+.sec-kicker::before { content: ''; width: 20px; height: 1px; background: var(--gold); }
+.sec-title { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: clamp(28px, 3.4vw, 38px); color: var(--ink); line-height: 1.12; letter-spacing: -0.5px; }
+.sec-sub { margin-top: 12px; max-width: 60ch; font-size: 15px; line-height: 1.7; color: #3d3830; }
+.sec-more { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--navy); text-decoration: none; white-space: nowrap; padding-bottom: 3px; border-bottom: 2px solid var(--gold); transition: color 0.15s; }
+.sec-more:hover { color: #9a7400; }
 
-.hero-inner{position:relative;z-index:2;max-width:900px;}
-.hero-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:28px;}
-.hero-eyebrow-line{width:40px;height:1px;background:var(--gold);}
-.hero-eyebrow-text{font-size:11px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);}
-.hero-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(72px,12vw,160px);line-height:0.85;letter-spacing:0.02em;margin-bottom:28px;}
-.hero-h1 .line1{color:var(--white);}
-.hero-h1 .line2{color:var(--gold);}
-.hero-h1 .line3{color:transparent;-webkit-text-stroke:1px rgba(253,250,245,0.2);}
-.hero-sub{font-size:16px;font-weight:300;line-height:1.75;color:var(--fog);max-width:520px;margin-bottom:52px;}
-.hero-sub strong{color:var(--white);font-weight:500;}
-.hero-cta-row{display:flex;gap:16px;align-items:center;}
-.cta-main{background:var(--gold);color:var(--navy);padding:15px 36px;font-size:11px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;text-decoration:none;border-radius:1px;transition:all 0.2s;}
-.cta-main:hover{background:#e8c97a;transform:translateY(-1px);}
-.cta-learn{font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--fog-2);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color 0.2s;}
-.cta-learn::after{content:'↓';transition:transform 0.2s;}
-.cta-learn:hover{color:var(--gold);}
-.cta-learn:hover::after{transform:translateY(3px);}
+/* ── Buttons ─────────────────────────────────────────────────────── */
+.btn-solid { background: var(--gold); color: var(--ink); font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; min-height: 44px; padding: 0 22px; border-radius: var(--radius-sm); box-shadow: 0 2px 8px rgba(232,176,0,0.35); transition: background 0.18s var(--ease), transform 0.15s var(--ease), box-shadow 0.15s var(--ease); display: inline-flex; align-items: center; justify-content: center; gap: 8px; white-space: nowrap; }
+.btn-solid:hover { background: #d4a000; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(232,176,0,0.45); }
+.btn-solid:active { transform: translateY(0); }
+.btn-ghost { color: var(--white); font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; min-height: 44px; padding: 0 20px; border: 1px solid rgba(255,255,255,0.45); border-radius: var(--radius-sm); background: rgba(14,30,69,0.35); display: inline-flex; align-items: center; justify-content: center; gap: 8px; white-space: nowrap; transition: background 0.18s, border-color 0.18s, transform 0.15s var(--ease); }
+.btn-ghost:hover { background: rgba(255,255,255,0.14); border-color: var(--white); transform: translateY(-1px); }
+.btn-navy { background: var(--navy); color: var(--white); font-weight: 700; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; min-height: 42px; padding: 0 20px; border-radius: var(--radius-sm); display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; transition: background 0.15s; }
+.btn-navy:hover { background: #1a2f63; }
 
-/* TICKER STRIP */
-.ticker{background:var(--gold);padding:0;overflow:hidden;white-space:nowrap;}
-.ticker-inner{display:inline-flex;animation:ticker 20s linear infinite;}
-.ticker-item{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.2em;color:var(--navy);padding:12px 40px;border-right:1px solid rgba(11,31,58,0.2);}
-@keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+/* ── Hero (photo behind, as on the main site's matchday hero) ────── */
+.matchday { position: relative; overflow: hidden; background: var(--navy); min-height: clamp(520px, 72vh, 640px); display: flex; align-items: flex-end; }
+.mast-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 70% 30%; }
+.mast-overlay { position: absolute; inset: 0; z-index: 1; background:
+  linear-gradient(to bottom, rgba(14,30,69,0.30) 0%, rgba(14,30,69,0.50) 45%, rgba(14,30,69,0.96) 100%),
+  linear-gradient(to right, rgba(14,30,69,0.88) 0%, rgba(14,30,69,0.40) 60%, rgba(14,30,69,0.10) 100%); }
+.md-inner { position: relative; z-index: 3; width: 100%; max-width: 1200px; margin: 0 auto; padding: 72px 48px 52px; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px; }
+.md-main { flex: 1 1 560px; min-width: 0; }
+/* Lockup: crest | gold rule | school name over clinic name */
+.md-lockup { display: flex; align-items: center; gap: 14px; }
+.md-mark { flex-shrink: 0; height: 52px; width: auto; filter: drop-shadow(0 4px 18px rgba(6,12,30,0.55)); }
+/* Graduate ships one weight; never let the browser fake a bold */
+.md-title { font-family: 'Graduate', serif; font-weight: 400; font-synthesis: none; text-transform: uppercase; line-height: 1; color: var(--white); padding-left: 14px; border-left: 2px solid var(--gold); }
+.md-school { display: block; font-size: 12px; letter-spacing: 0.3em; color: var(--gold); margin-bottom: 6px; }
+.md-sport { display: block; font-size: 18px; letter-spacing: 0.02em; }
+.md-kicker { margin-top: 28px; display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.85); }
+.md-kicker::before { content: ''; width: 24px; height: 1px; flex-shrink: 0; background: var(--gold); }
+.md-headline { margin-top: 16px; max-width: 16ch; font-family: 'Graduate', serif; font-weight: 400; font-synthesis: none; font-size: clamp(36px, 5.4vw, 68px); line-height: 1; text-transform: uppercase; letter-spacing: 0.01em; color: var(--white); text-wrap: balance; text-shadow: 0 2px 24px rgba(6,12,30,0.45); }
+.md-headline em { font-style: normal; color: var(--gold); }
+.md-details { margin-top: 18px; max-width: 58ch; font-size: 16px; line-height: 1.6; color: rgba(255,255,255,0.92); }
+.md-details strong { color: var(--white); font-weight: 600; }
+.md-actions { margin-top: 26px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
 
-/* SECTIONS */
-section{padding:100px 60px;}
-.section-inner{max-width:1100px;margin:0 auto;}
-.tag{font-size:10px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:20px;}
-.tag::before{content:'';width:28px;height:1px;background:var(--gold);}
-.section-h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,6vw,72px);line-height:0.9;letter-spacing:0.02em;}
+.md-count { flex: 0 1 240px; padding: 20px 24px 22px; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.18); border-top: 3px solid var(--gold); background: rgba(14,30,69,0.62); display: flex; flex-direction: column; gap: 8px; color: var(--white); }
+.md-count-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.8); }
+.md-count-val { display: flex; align-items: baseline; gap: 10px; }
+.md-count-num { font-family: 'Graduate', serif; font-weight: 400; font-synthesis: none; font-size: 60px; line-height: 1; }
+.md-count-unit { font-size: 18px; font-weight: 600; }
+.md-count-then { font-size: 13px; line-height: 1.5; color: rgba(255,255,255,0.8); }
 
-/* ABOUT */
-.about{background:var(--navy-2);}
-.about-grid{display:grid;grid-template-columns:5fr 7fr;gap:72px;align-items:start;margin-top:56px;}
-.about-photo{width:100%;display:block;border-radius:2px;object-fit:cover;object-position:top center;max-height:680px;}
-.about-text p{font-size:15px;line-height:1.85;color:var(--fog);margin-bottom:16px;}
-.about-text strong{color:var(--white);}
-.coach-name{font-family:'Bebas Neue',sans-serif;font-size:56px;color:var(--white);line-height:1;letter-spacing:0.04em;margin-bottom:6px;}
-.coach-role{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:32px;}
-.coach-creds{display:flex;flex-direction:column;gap:10px;margin-top:32px;padding-top:28px;border-top:1px solid rgba(201,168,76,0.1);}
-.cred-row{display:flex;align-items:baseline;gap:14px;}
-.cred-year{font-size:10px;font-weight:700;letter-spacing:0.14em;color:var(--gold);min-width:80px;flex-shrink:0;}
-.cred-title{font-size:13px;color:var(--fog);}
-.coach-stat-row{display:flex;gap:0;border-top:1px solid rgba(201,168,76,0.1);margin-top:32px;}
-.coach-stat{flex:1;padding:20px 16px;}
-.coach-stat:not(:last-child){border-right:1px solid rgba(201,168,76,0.1);}
-.cs-num{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--gold);line-height:1;}
-.cs-label{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--fog-2);margin-top:4px;}
+/* ── Session rail (stands in for the main site's results rail) ───── */
+.rail { background: var(--white); border-bottom: 1px solid var(--rule); }
+.rail-facts { max-width: 1200px; margin: 0 auto; padding: 22px 48px 24px; display: grid; grid-template-columns: repeat(5, minmax(0, auto)); justify-content: space-between; }
+.rf { display: flex; flex-direction: column; gap: 6px; padding: 0 28px; border-left: 1px solid var(--rule); }
+.rf:first-child { padding-left: 0; border-left: none; }
+.rf:last-child { padding-right: 0; }
+.rf dt { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
+.rf dd { font-family: 'DM Serif Display', serif; font-size: 23px; line-height: 1.15; color: var(--navy); }
+.rf dd.rf-note { font-family: 'DM Sans', sans-serif; font-size: 12.5px; line-height: 1.4; color: var(--muted); }
 
-/* CURRICULUM */
-.curriculum{background:var(--navy);}
-.curriculum-sub{font-size:14px;color:var(--fog);margin-top:16px;margin-bottom:48px;max-width:560px;line-height:1.7;}
-.slot-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,0.08);}
-.sc{background:var(--navy);padding:36px 32px 32px;position:relative;overflow:hidden;transition:background 0.25s;}
-.sc:hover{background:var(--navy-2);}
-.sc-num{font-family:'Bebas Neue',sans-serif;font-size:88px;color:rgba(201,168,76,0.05);line-height:1;position:absolute;top:8px;right:14px;pointer-events:none;}
-.sc-time{font-family:'Bebas Neue',sans-serif;font-size:38px;color:var(--white);line-height:1;letter-spacing:0.03em;margin-bottom:10px;}
-.sc-label{font-size:10px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:20px;}
-.sc-cta{display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--navy);background:var(--gold);padding:8px 18px;border-radius:1px;text-decoration:none;}
-.about-photos{display:flex;flex-direction:column;gap:8px;}
-.skills-block{margin-top:64px;padding-top:56px;border-top:1px solid rgba(201,168,76,0.1);}
-.skills-header{display:flex;align-items:baseline;justify-content:space-between;gap:40px;margin-bottom:32px;flex-wrap:wrap;}
-.skills-eyebrow{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,44px);color:var(--white);letter-spacing:0.03em;flex-shrink:0;}
-.skills-note{font-size:13px;color:var(--fog);line-height:1.65;max-width:420px;}
-.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(201,168,76,0.07);}
-.sk{background:var(--navy);padding:18px 20px;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--fog);display:flex;align-items:center;gap:10px;transition:background 0.2s,color 0.2s;}
-.sk::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0;opacity:0.6;}
-.sk:hover{background:var(--navy-2);color:var(--white);}
+/* ── Coach ───────────────────────────────────────────────────────── */
+.coach-card { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 52px; align-items: start; }
+.coach-photo { position: sticky; top: 80px; }
+.coach-photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 49% 30%; display: block; border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--navy); }
+.coach-role { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.24em; line-height: 1.6; text-transform: uppercase; color: var(--gold); background: var(--navy); display: inline-block; padding: 5px 12px; margin-bottom: 14px; }
+.coach-name { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: clamp(34px, 4vw, 48px); color: var(--ink); line-height: 1; letter-spacing: -1px; margin-bottom: 24px; }
+.bio-text { font-size: 15px; color: #3d3830; line-height: 1.78; margin-bottom: 16px; max-width: 64ch; }
+.bio-text strong { color: var(--navy); font-weight: 600; }
+.bio-sub { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 20px; color: var(--navy); margin: 28px 0 8px; padding-bottom: 8px; border-bottom: 2px solid var(--gold); }
+.creds { margin-bottom: 24px; }
+.cred-row { display: grid; grid-template-columns: 96px 1fr; gap: 14px; padding: 11px 0; border-bottom: 1px solid var(--rule); }
+.cred-row dt { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; color: #9a7400; padding-top: 2px; }
+.cred-row dd { font-size: 14.5px; line-height: 1.5; color: var(--ink); }
+.coach-stats { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--white); border: 1px solid var(--rule); border-top: 3px solid var(--gold); border-radius: var(--radius-md); box-shadow: var(--shadow-card); margin-bottom: 22px; }
+.cs { padding: 16px 18px 18px; display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 6px; }
+.cs + .cs { border-left: 1px solid var(--rule); }
+.cs dt { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+.cs dd { font-family: 'DM Serif Display', serif; font-size: 30px; line-height: 1; color: var(--navy); }
 
-/* PRICING */
-.pricing{background:var(--navy-2);}
-.pricing-split{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:56px;}
-.price-panel{border:1px solid rgba(201,168,76,0.12);padding:48px 40px;position:relative;overflow:hidden;border-radius:2px;transition:border-color 0.3s,transform 0.3s;}
-.price-panel:hover{border-color:rgba(201,168,76,0.4);transform:translateY(-2px);}
-.price-panel::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 100% 60% at 50% 0%,var(--gold-glow),transparent 60%);pointer-events:none;}
-.pp-type{font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
-.pp-price{font-family:'Bebas Neue',sans-serif;font-size:88px;color:var(--white);line-height:1;margin-bottom:6px;}
-.pp-unit{font-size:12px;color:var(--fog-2);letter-spacing:0.1em;margin-bottom:36px;}
-.pp-features{display:flex;flex-direction:column;gap:12px;margin-bottom:40px;}
-.pp-f{font-size:14px;color:var(--fog);display:flex;gap:12px;align-items:flex-start;}
-.pp-f::before{content:'◆';color:var(--gold);font-size:6px;margin-top:6px;flex-shrink:0;}
-.pp-cta{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:15px;font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;border-radius:1px;transition:background 0.2s;}
-.pp-cta:hover{background:#e8c97a;}
+/* ── Time slots ──────────────────────────────────────────────────── */
+.slots { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 16px; }
+.slot { position: relative; overflow: hidden; background: var(--white); border: 1px solid var(--rule); border-top: 3px solid var(--gold); border-radius: var(--radius-md); box-shadow: var(--shadow-card); padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 6px; transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease); }
+.slot:hover { transform: translateY(-2px); box-shadow: var(--shadow-card-hover); }
+.slot-num { position: absolute; top: 2px; right: 16px; font-family: 'DM Serif Display', serif; font-size: 96px; line-height: 1; color: rgba(14,30,69,0.06); pointer-events: none; }
+.slot-label { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: #5e574d; }
+.slot-time { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 32px; line-height: 1.1; color: var(--navy); }
+.slot-fmt { font-size: 13.5px; color: var(--muted); }
+.slot .btn-navy { margin-top: 14px; align-self: flex-start; }
 
-/* SCHEDULE TABLE */
-.schedule-section{background:var(--navy-3);}
-.sched-table{width:100%;border-collapse:collapse;margin-top:48px;}
-.sched-table thead th{text-align:left;padding:12px 20px;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid rgba(201,168,76,0.15);}
-.sched-table tbody td{padding:20px;font-size:14px;color:var(--fog);border-bottom:1px solid rgba(255,255,255,0.04);}
-.sched-table tbody tr:hover td{background:rgba(201,168,76,0.03);color:var(--white);}
-.sched-table tbody td:first-child{font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--gold);letter-spacing:0.08em;}
-.sched-table tbody td strong{color:var(--white);}
+/* ── Skill pool ──────────────────────────────────────────────────── */
+.skills { margin-top: 52px; padding-top: 40px; border-top: 1px solid var(--rule); }
+.skills-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px 40px; flex-wrap: wrap; margin-bottom: 20px; }
+.skills-title { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 26px; line-height: 1.15; color: var(--ink); }
+.skills-note { max-width: 50ch; font-size: 14px; line-height: 1.65; color: var(--muted); }
+.skills-grid { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); gap: 8px; }
+.skills-grid li { display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 8px 14px; border-radius: var(--radius-sm); background: var(--cream); border: 1px solid var(--rule); font-size: 14px; font-weight: 600; color: var(--navy); }
+.skills-grid li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
 
-/* LOCATIONS */
-.locations{background:var(--navy);}
-.loc-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px;}
-.lc{border:1px solid rgba(201,168,76,0.1);border-radius:2px;padding:32px 28px;transition:border-color 0.3s,background 0.3s;}
-.lc:hover{border-color:rgba(201,168,76,0.35);background:rgba(201,168,76,0.03);}
-.lc.primary{border-color:rgba(201,168,76,0.3);background:rgba(201,168,76,0.04);}
-.lc-badge{font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
-.lc-name{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:700;color:var(--white);margin-bottom:4px;letter-spacing:0.02em;}
-.lc-addr{font-size:11px;color:var(--fog-2);margin-bottom:14px;}
-.lc-desc{font-size:13px;color:var(--fog);line-height:1.55;}
+/* ── Pricing ─────────────────────────────────────────────────────── */
+.price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 20px; }
+.price-card { background: var(--white); border: 1px solid var(--rule); border-top: 3px solid var(--gold); border-radius: var(--radius-md); box-shadow: var(--shadow-card); padding: 28px 32px 32px; display: flex; flex-direction: column; }
+.pc-type { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: #5e574d; }
+.pc-price { margin-top: 14px; font-family: 'DM Serif Display', serif; font-size: 68px; line-height: 1; letter-spacing: -1px; color: var(--navy); }
+.pc-unit { margin-top: 8px; font-size: 13.5px; color: var(--muted); }
+.pc-list { list-style: none; margin: 22px 0 28px; padding-top: 20px; border-top: 1px solid var(--soft); display: flex; flex-direction: column; gap: 10px; }
+.pc-list li { position: relative; padding-left: 20px; font-size: 14.5px; line-height: 1.6; color: #3d3830; }
+.pc-list li::before { content: ''; position: absolute; left: 2px; top: 8px; width: 7px; height: 7px; background: var(--gold); transform: rotate(45deg); }
+.price-card .btn-solid { margin-top: auto; width: 100%; }
+.price-note { margin-top: 20px; padding: 15px 20px; background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-md) var(--radius-md) 0; font-size: 14.5px; line-height: 1.65; color: #4a4132; }
+.price-note strong { color: var(--navy); font-weight: 600; }
 
-/* FOOTER */
-footer{background:var(--navy-2);padding:40px 60px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(201,168,76,0.1);}
-.footer-brand{font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--gold);letter-spacing:0.1em;}
-.footer-sub{font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--fog-2);margin-top:2px;}
-.footer-link{font-size:12px;color:var(--fog-2);}
-.footer-link a{color:var(--gold);text-decoration:none;font-family:'Bebas Neue';font-size:18px;letter-spacing:0.06em;}
+/* ── Locations ───────────────────────────────────────────────────── */
+.loc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 16px; }
+.loc-card { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius-md); box-shadow: var(--shadow-card); padding: 24px 24px 22px; display: flex; flex-direction: column; gap: 8px; }
+.loc-primary { background: var(--gold-light); border-color: var(--gold); box-shadow: none; }
+.loc-badge { align-self: flex-start; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; background: var(--soft); color: var(--navy); border: 1px solid var(--rule); }
+.loc-primary .loc-badge { background: var(--navy); color: var(--gold); border-color: var(--navy); }
+.loc-name { margin-top: 6px; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 24px; line-height: 1.15; color: var(--ink); }
+.loc-addr { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.03em; color: var(--muted); }
+.loc-desc { font-size: 14px; line-height: 1.65; color: #3d3830; margin-bottom: 8px; }
+.loc-card .sec-more { margin-top: auto; align-self: flex-start; }
 
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
-.hero-eyebrow,.hero-h1,.hero-sub,.hero-cta-row{animation:fadeUp 0.7s ease both;}
-.hero-eyebrow{animation-delay:0.05s;}.hero-h1{animation-delay:0.2s;}.hero-sub{animation-delay:0.35s;}.hero-cta-row{animation-delay:0.5s;}
+/* ── Book band ───────────────────────────────────────────────────── */
+.book { padding: 0 0 64px; background: var(--white); }
+.book-band { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 32px; padding: 26px 30px; border-radius: var(--radius-md); background: var(--gold-light); border: 1px solid var(--gold); }
+.book-label { display: block; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: #5e574d; margin-bottom: 8px; }
+.book-band h2 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 28px; line-height: 1.15; color: var(--navy); }
+.book-band p { margin-top: 8px; max-width: 60ch; font-size: 14.5px; line-height: 1.65; color: #3d3830; }
+.book-band p a { color: var(--navy); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--gold); }
+.book-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; }
 
-@media(max-width:900px){.skills-grid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:768px){
-  nav{padding:16px 24px;}
-  .nav-links{display:none;}
-  section,.hero{padding-left:24px;padding-right:24px;}
-  .about-grid,.pricing-split{grid-template-columns:1fr;}
-  .about-photo{max-height:420px;}
-  .slot-cards,.skills-grid,.loc-cards{grid-template-columns:1fr;}
-  .skills-header{flex-direction:column;gap:12px;}
-  footer{flex-direction:column;gap:16px;text-align:center;padding:32px 24px;}
-  .hero-h1{font-size:clamp(60px,16vw,100px);}
+/* ── Footer ──────────────────────────────────────────────────────── */
+footer { background: var(--navy); color: var(--white); border-top: 3px solid var(--gold); }
+.footer-brand { display: flex; align-items: center; gap: 14px; padding: 36px 48px 24px; border-bottom: 1px solid rgba(255,255,255,0.08); max-width: 1200px; margin: 0 auto; }
+.footer-logo { height: 52px; width: auto; }
+.footer-brand-name { font-family: 'Graduate', serif; font-weight: 400; font-synthesis: none; font-size: 16px; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.8); }
+.footer-brand-name span { white-space: nowrap; }
+.footer-inner { max-width: 1200px; margin: 0 auto; padding: 28px 48px 32px; display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; }
+.footer-col h2 { font-family: 'JetBrains Mono', monospace; font-weight: 400; font-size: 9.5px; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.footer-col ul { list-style: none; }
+.footer-col ul li + li { margin-top: 8px; }
+.footer-col a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 13px; display: inline-flex; align-items: center; gap: 4px; transition: color 0.15s, gap 0.15s var(--ease); }
+.footer-col a:hover { color: var(--gold); gap: 7px; }
+.footer-bottom { max-width: 1200px; margin: 0 auto; padding: 16px 48px 24px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 11px; color: rgba(255,255,255,0.25); font-family: 'JetBrains Mono', monospace; letter-spacing: 0.05em; text-align: center; }
+
+/* ── Animations ──────────────────────────────────────────────────── */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+.md-inner { animation: fadeUp 0.6s var(--ease) 0.2s both; }
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 1060px) {
+  .rail-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 24px; }
+  .rf, .rf:first-child, .rf:last-child { padding: 0; border-left: none; }
+}
+@media (max-width: 900px) {
+  .nav-inner { padding: 0 20px; }
+  .nav-links { display: none; }
+  .nav-burger { display: block; }
+  .wrap { padding: 0 20px; }
+  .md-inner { padding: 56px 20px 40px; }
+  .rail-facts { padding: 18px 20px 20px; }
+  .sec { padding: 48px 0 52px; }
+  .book { padding-bottom: 48px; }
+  .coach-card { grid-template-columns: 1fr; gap: 28px; }
+  .coach-photo { position: static; }
+  .coach-photo img { aspect-ratio: 3 / 2; max-height: 460px; }
+}
+@media (max-width: 640px) {
+  .md-inner { padding: 120px 16px 22px; }
+  .md-mark { height: 40px; }
+  .md-title { padding-left: 12px; }
+  .md-school { font-size: 10px; letter-spacing: 0.26em; }
+  .md-sport { font-size: 15px; }
+  .md-kicker { margin-top: 20px; font-size: 11px; letter-spacing: 0.22em; }
+  .md-kicker-county { display: none; }
+  .md-headline { margin-top: 12px; font-size: clamp(30px, 10vw, 40px); }
+  .md-details { margin-top: 12px; font-size: 14.5px; }
+  .md-actions { margin-top: 16px; gap: 10px; }
+  .md-actions .btn-solid, .md-actions .btn-ghost { flex: 1 1 0; min-height: 46px; padding: 0 12px; font-size: 12.5px; }
+  .md-count { display: none; }
+  .wrap { padding: 0 16px; }
+  .rail-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 16px; gap: 14px 16px; }
+  .rf-wide { grid-column: 1 / -1; }
+  .rf dd { font-size: 20px; }
+  .sec { padding: 36px 0 40px; }
+  .book { padding-bottom: 40px; }
+  .coach-stats { grid-template-columns: 1fr 1fr 1fr; }
+  .cs { padding: 14px 12px 16px; }
+  .cs dd { font-size: 24px; }
+  .cred-row { grid-template-columns: 1fr; gap: 2px; }
+  .pc-price { font-size: 56px; }
+  .price-card { padding: 24px 22px 26px; }
+  .book-band { padding: 22px 20px; }
+  .book-actions, .book-actions .btn-navy { width: 100%; }
+  .footer-brand { padding: 28px 20px 16px; flex-direction: column; align-items: flex-start; gap: 8px; }
+  .footer-inner { grid-template-columns: 1fr; padding: 24px 20px 24px; gap: 28px; text-align: center; }
+  .footer-bottom { padding: 14px 20px 20px; }
+}
+
+/* ── Reduced motion ──────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to content</a>
 
-<nav>
-  <div class="nav-brand">DE:BV</div>
-  <div class="nav-links">
-    <a href="#about">Coach</a>
-    <a href="#curriculum">Training</a>
+<div class="nav-wrap">
+  <div class="nav-inner">
+    <a href="./" class="nav-brand">
+      <img src="https://debvb.github.io/downingtown-east-volleyball-mark.png" alt="" height="40" width="36">
+      <span class="nav-brand-text">
+        <span class="nav-brand-kicker">Downingtown East</span>
+        <span class="nav-brand-name">DEVB Clinics</span>
+      </span>
+    </a>
+    <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+      <svg id="burger-icon" width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#coach">Coach</a>
+      <a href="#training">Training</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#locations">Locations</a>
+      <a href="https://debvb.github.io/">Team Site</a>
+      <a href="https://forms.gle/zLQFsLoHFxz461Mi7" target="_blank" rel="noopener noreferrer" class="nav-cta">Book Now</a>
+    </nav>
+  </div>
+  <nav class="nav-drawer" id="nav-drawer" aria-label="Mobile navigation">
+    <a href="#coach">Coach</a>
+    <a href="#training">Training</a>
     <a href="#pricing">Pricing</a>
     <a href="#locations">Locations</a>
-    <a href="https://forms.gle/zLQFsLoHFxz461Mi7" class="nav-cta">Book Now</a>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-grid"></div>
-  <div class="hero-orb"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow">
-      <div class="hero-eyebrow-line"></div>
-      <div class="hero-eyebrow-text">Chester County · Summer 2026</div>
-    </div>
-    <div class="hero-h1">
-      <div class="line1">Sand</div>
-      <div class="line2">Volleyball</div>
-      <div class="line3">Training</div>
-    </div>
-    <p class="hero-sub">Private sand and indoor volleyball coaching with the <strong>DE:BV head coach</strong>. Three one-hour blocks every <strong>Monday &amp; Wednesday</strong> at Exton Park starting <strong>June 8.</strong></p>
-    <div class="hero-cta-row">
-      <a href="https://forms.gle/zLQFsLoHFxz461Mi7" class="cta-main">Book Your Block</a>
-      <a href="#curriculum" class="cta-learn">See what's covered</a>
-    </div>
-  </div>
-</section>
-
-<!-- TICKER -->
-<div class="ticker">
-  <div class="ticker-inner">
-    <div class="ticker-item">Mon &amp; Wed</div>
-    <div class="ticker-item">9 AM – Noon</div>
-    <div class="ticker-item">Starting June 8, 2026</div>
-    <div class="ticker-item">1 Player — $75</div>
-    <div class="ticker-item">2 Players — $100</div>
-    <div class="ticker-item">Exton Park Sand Courts</div>
-    <div class="ticker-item">No Walk-Ins</div>
-    <div class="ticker-item">DE:BV Beach Training</div>
-    <!-- duplicate for seamless loop -->
-    <div class="ticker-item">Mon &amp; Wed</div>
-    <div class="ticker-item">9 AM – Noon</div>
-    <div class="ticker-item">Starting June 8, 2026</div>
-    <div class="ticker-item">1 Player — $75</div>
-    <div class="ticker-item">2 Players — $100</div>
-    <div class="ticker-item">Exton Park Sand Courts</div>
-    <div class="ticker-item">No Walk-Ins</div>
-    <div class="ticker-item">DE:BV Beach Training</div>
-  </div>
+    <a href="https://debvb.github.io/">Team Site</a>
+    <a href="https://forms.gle/zLQFsLoHFxz461Mi7" target="_blank" rel="noopener noreferrer" class="nav-cta-mobile">Book a Block</a>
+  </nav>
 </div>
 
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="section-inner">
-    <div class="tag">Your Coach</div>
-    <div class="section-h2">Built to Coach.<br>Here to Develop.</div>
-    <div class="about-grid">
-      <div class="about-photos">
-        <img src="IMG_3727.JPEG" alt="Grant — DE:BV Head Coach" class="about-photo">
-        <img src="IMG_3725.JPEG" alt="Grant — DE:BV Head Coach" class="about-photo">
+<main id="main">
+
+<!-- ═══ HERO ═══════════════════════════════════════════════════════════ -->
+<section class="matchday" aria-labelledby="clinic-title">
+  <img src="devb-clinics-volleyball-training.jpg" alt="" class="mast-photo" width="1600" height="1067" fetchpriority="high">
+  <div class="mast-overlay"></div>
+
+  <div class="md-inner">
+    <div class="md-main">
+      <div class="md-lockup">
+        <img src="https://debvb.github.io/downingtown-east-volleyball-mark.png" alt="" class="md-mark" width="106" height="116">
+        <div class="md-title"><span class="md-school">Downingtown East</span> <span class="md-sport">DEVB Clinics</span></div>
       </div>
-      <div class="about-text">
-        <div class="coach-name">Grant Shieh</div>
+      <div class="md-kicker"><span>Exton, PA · <span class="md-kicker-county">Chester County · </span>Summer 2026</span></div>
+      <h1 class="md-headline" id="clinic-title">Sand Volleyball Clinics in <em>Exton, PA</em></h1>
+      <p class="md-details">Private sand and indoor volleyball coaching with <strong>Downingtown East head coach Grant Shieh</strong>. Three one-hour blocks every <strong>Monday &amp; Wednesday</strong> at Exton Park starting <strong>June 8</strong>.</p>
+      <div class="md-actions">
+        <a href="https://forms.gle/zLQFsLoHFxz461Mi7" target="_blank" rel="noopener noreferrer" class="btn-solid">Book Your Block</a>
+        <a href="#training" class="btn-ghost">See What's Covered</a>
+      </div>
+    </div>
+
+    <aside class="md-count" aria-label="Pricing at a glance">
+      <span class="md-count-label">Per one-hour block</span>
+      <span class="md-count-val"><span class="md-count-num">$75</span> <span class="md-count-unit">solo</span></span>
+      <span class="md-count-then">$100 for two players — $50 each</span>
+    </aside>
+  </div>
+</section>
+
+<!-- ═══ SESSION RAIL ═══════════════════════════════════════════════════ -->
+<section class="rail" aria-label="Session details">
+  <dl class="rail-facts">
+    <div class="rf"><dt>Days</dt><dd>Mon &amp; Wed</dd><dd class="rf-note">Every week</dd></div>
+    <div class="rf"><dt>Time</dt><dd>9 AM – Noon</dd><dd class="rf-note">Three one-hour blocks</dd></div>
+    <div class="rf"><dt>Starts</dt><dd>June 8, 2026</dd><dd class="rf-note">Summer session</dd></div>
+    <div class="rf"><dt>Where</dt><dd>Exton Park</dd><dd class="rf-note">Sand courts · Exton, PA</dd></div>
+    <div class="rf rf-wide"><dt>Booking</dt><dd>By prior Sunday</dd><dd class="rf-note">No walk-ins</dd></div>
+  </dl>
+</section>
+
+<!-- ═══ COACH ══════════════════════════════════════════════════════════ -->
+<section class="sec sec-cream" id="coach" aria-labelledby="coach-heading">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">Your Coach</div>
+      <h2 class="sec-title" id="coach-heading">Built to Coach. Here to Develop.</h2>
+    </div>
+
+    <div class="coach-card">
+      <div class="coach-photo">
+        <img src="grant-shieh-volleyball-coach.jpg" alt="Coach Grant Shieh at a Downingtown East volleyball session" width="1600" height="1067" loading="lazy" decoding="async">
+      </div>
+      <div>
         <div class="coach-role">Head Coach · DE Boys Volleyball · Royal Legends Club</div>
-        <p>Grant played three years as a <strong>varsity libero</strong> before continuing as a libero with <strong>Temple's club volleyball program</strong>. Time spent owning the back row — reading attacks, directing coverage, competing every rep — is the foundation everything he coaches comes from.</p>
-        <p>He started coaching at <strong>Council Rock North</strong> in 2021, working with both the boys and girls programs through 2023. He joined <strong>Downingtown East</strong> as girls assistant coach in 2023, then took over as <strong>head coach of the DE Boys</strong> program in 2024. He currently coaches with <strong>Royal Legends</strong> club as well.</p>
-        <p>Whether you're training for indoor 6s or developing your sand game, every session is structured, purposeful, and built around where you actually are — not a one-size-fits-all template.</p>
-        <div class="coach-creds">
-          <div class="cred-row"><span class="cred-year">2021–2023</span><span class="cred-title">Council Rock North — Assistant Coach, Boys &amp; Girls</span></div>
-          <div class="cred-row"><span class="cred-year">2023–Pres.</span><span class="cred-title">Downingtown East — Girls Assistant Coach</span></div>
-          <div class="cred-row"><span class="cred-year">2024–Pres.</span><span class="cred-title">Downingtown East — Boys Head Coach</span></div>
-          <div class="cred-row"><span class="cred-year">2025–Pres.</span><span class="cred-title">Royal Legends — Club Coach</span></div>
-        </div>
-        <div class="coach-stat-row">
-          <div class="coach-stat"><div class="cs-num">5+</div><div class="cs-label">Yrs Coaching</div></div>
-          <div class="coach-stat"><div class="cs-num">4</div><div class="cs-label">Programs</div></div>
-          <div class="coach-stat"><div class="cs-num">Libero</div><div class="cs-label">Playing Background</div></div>
-        </div>
+        <h3 class="coach-name">Grant Shieh</h3>
+        <p class="bio-text">Grant played three years as a <strong>varsity libero</strong> before continuing as a libero with <strong>Temple's club volleyball program</strong>. Time spent owning the back row — reading attacks, directing coverage, competing every rep — is the foundation everything he coaches comes from.</p>
+        <p class="bio-text">He started coaching at <strong>Council Rock North</strong> in 2021, working with both the boys and girls programs through 2023. He joined <strong>Downingtown East</strong> as girls assistant coach in 2023, then took over as <strong>head coach of the DE Boys</strong> program in 2024. He currently coaches with <strong>Royal Legends</strong> club as well.</p>
+        <p class="bio-text">Whether you're training for indoor 6s or developing your sand game, every session is structured, purposeful, and built around where you actually are — not a one-size-fits-all template.</p>
+
+        <h4 class="bio-sub">Coaching History</h4>
+        <dl class="creds">
+          <div class="cred-row"><dt>2021–2023</dt><dd>Council Rock North — Assistant Coach, Boys &amp; Girls</dd></div>
+          <div class="cred-row"><dt>2023–Pres.</dt><dd>Downingtown East — Girls Assistant Coach</dd></div>
+          <div class="cred-row"><dt>2024–Pres.</dt><dd>Downingtown East — Boys Head Coach</dd></div>
+          <div class="cred-row"><dt>2025–Pres.</dt><dd>Royal Legends — Club Coach</dd></div>
+        </dl>
+
+        <dl class="coach-stats">
+          <div class="cs"><dt>Yrs Coaching</dt><dd>5+</dd></div>
+          <div class="cs"><dt>Programs</dt><dd>4</dd></div>
+          <div class="cs"><dt>Playing Background</dt><dd>Libero</dd></div>
+        </dl>
+
+        <a href="https://debvb.github.io/coaches.html" class="sec-more">Full coaching staff &rarr;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CURRICULUM -->
-<section class="curriculum" id="curriculum">
-  <div class="section-inner">
-    <div class="tag">Choose Your Block</div>
-    <div class="section-h2">Three Time Slots.<br>One Morning.</div>
-    <p class="curriculum-sub">Each session runs one hour. Pick the slot that fits your schedule — coaching is the same across all three.</p>
-    <div class="slot-cards">
-      <div class="sc">
-        <div class="sc-num">1</div>
-        <div class="sc-time">9 – 10 AM</div>
-        <div class="sc-label">Block 1</div>
-        <a href="https://forms.gle/zLQFsLoHFxz461Mi7" class="sc-cta">Pick this slot</a>
-      </div>
-      <div class="sc">
-        <div class="sc-num">2</div>
-        <div class="sc-time">10 – 11 AM</div>
-        <div class="sc-label">Block 2</div>
-        <a href="https://forms.gle/zLQFsLoHFxz461Mi7" class="sc-cta">Pick this slot</a>
-      </div>
-      <div class="sc">
-        <div class="sc-num">3</div>
-        <div class="sc-time">11 AM – Noon</div>
-        <div class="sc-label">Block 3</div>
-        <a href="https://forms.gle/zLQFsLoHFxz461Mi7" class="sc-cta">Pick this slot</a>
-      </div>
+<!-- ═══ TRAINING ═══════════════════════════════════════════════════════ -->
+<section class="sec sec-white" id="training" aria-labelledby="training-heading">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">Choose Your Block</div>
+      <h2 class="sec-title" id="training-heading">Three Time Slots. One Morning.</h2>
+      <p class="sec-sub">Each session runs one hour. Pick the slot that fits your schedule — coaching is the same across all three.</p>
     </div>
-    <div class="skills-block">
-      <div class="skills-header">
-        <div class="skills-eyebrow">What Gets Worked</div>
+
+    <ol class="slots">
+      <li class="slot">
+        <span class="slot-num" aria-hidden="true">1</span>
+        <span class="slot-label">Block 1</span>
+        <h3 class="slot-time">9 – 10 AM</h3>
+        <span class="slot-fmt">Solo or partner</span>
+        <a href="https://forms.gle/zLQFsLoHFxz461Mi7" target="_blank" rel="noopener noreferrer" class="btn-navy">Pick this slot</a>
+      </li>
+      <li class="slot">
+        <span class="slot-num" aria-hidden="true">2</span>
+        <span class="slot-label">Block 2</span>
+        <h3 class="slot-time">10 – 11 AM</h3>
+        <span class="slot-fmt">Solo or partner</span>
+        <a href="https://forms.gle/zLQFsLoHFxz461Mi7" target="_blank" rel="noopener noreferrer" class="btn-navy">Pick this slot</a>
+      </li>
+      <li class="slot">
+        <span class="slot-num" aria-hidden="true">3</span>
+        <span class="slot-label">Block 3</span>
+        <h3 class="slot-time">11 AM – Noon</h3>
+        <span class="slot-fmt">Solo or partner</span>
+        <a href="https://forms.gle/zLQFsLoHFxz461Mi7" target="_blank" rel="noopener noreferrer" class="btn-navy">Pick this slot</a>
+      </li>
+    </ol>
+
+    <div class="skills">
+      <div class="skills-head">
+        <h3 class="skills-title">What Gets Worked</h3>
         <p class="skills-note">Every session draws from this skill pool — mix varies by player, position, and where you need the most development.</p>
       </div>
-      <div class="skills-grid">
-        <div class="sk">Sand Footwork</div>
-        <div class="sk">Platform Passing</div>
-        <div class="sk">Serve &amp; Receive</div>
-        <div class="sk">Body Positioning</div>
-        <div class="sk">Approach Mechanics</div>
-        <div class="sk">Arm Swing</div>
-        <div class="sk">Shot Selection</div>
-        <div class="sk">Sand Setting</div>
-        <div class="sk">Defensive Digging</div>
-        <div class="sk">Transition Play</div>
-        <div class="sk">Blocking</div>
-        <div class="sk">Live Game Reps</div>
+      <ul class="skills-grid">
+        <li>Sand Footwork</li>
+        <li>Platform Passing</li>
+        <li>Serve &amp; Receive</li>
+        <li>Body Positioning</li>
+        <li>Approach Mechanics</li>
+        <li>Arm Swing</li>
+        <li>Shot Selection</li>
+        <li>Sand Setting</li>
+        <li>Defensive Digging</li>
+        <li>Transition Play</li>
+        <li>Blocking</li>
+        <li>Live Game Reps</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRICING ════════════════════════════════════════════════════════ -->
+<section class="sec sec-cream" id="pricing" aria-labelledby="pricing-heading">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">Book a Block</div>
+      <h2 class="sec-title" id="pricing-heading">Choose Your Format.</h2>
+    </div>
+
+    <div class="price-grid">
+      <article class="price-card">
+        <h3 class="pc-type">Individual · Solo Player</h3>
+        <div class="pc-price">$75</div>
+        <div class="pc-unit">Per one-hour block</div>
+        <ul class="pc-list">
+          <li>Dedicated one-on-one coaching for the full hour</li>
+          <li>Drill selection tailored to your skill level and position</li>
+        </ul>
+        <a href="https://forms.gle/zLQFsLoHFxz461Mi7" target="_blank" rel="noopener noreferrer" class="btn-solid">Register Now</a>
+      </article>
+      <article class="price-card">
+        <h3 class="pc-type">Partner · Two Players</h3>
+        <div class="pc-price">$100</div>
+        <div class="pc-unit">Per one-hour block — $50 per player</div>
+        <ul class="pc-list">
+          <li>Both players coached simultaneously in the same session</li>
+          <li>Partner chemistry, communication, and shared live game reps</li>
+        </ul>
+        <a href="https://forms.gle/zLQFsLoHFxz461Mi7" target="_blank" rel="noopener noreferrer" class="btn-solid">Register Now</a>
+      </article>
+    </div>
+
+    <p class="price-note"><strong>Both formats:</strong> Mon &amp; Wed · 9 AM–Noon · starting June 8, 2026 · Exton Park sand courts · register by the prior Sunday.</p>
+  </div>
+</section>
+
+<!-- ═══ LOCATIONS ══════════════════════════════════════════════════════ -->
+<section class="sec sec-white" id="locations" aria-labelledby="locations-heading">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">Where We Train</div>
+      <h2 class="sec-title" id="locations-heading">Sand Courts Across Chester County.</h2>
+    </div>
+
+    <div class="loc-grid">
+      <article class="loc-card loc-primary">
+        <span class="loc-badge">Primary Venue</span>
+        <h3 class="loc-name">Exton Park</h3>
+        <p class="loc-addr">140 Church Farm Ln, Exton, PA</p>
+        <p class="loc-desc">West Whiteland Township sand volleyball court. Closest venue to Downingtown East — your home base for DEVB summer training.</p>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Exton+Park%2C+140+Church+Farm+Ln%2C+Exton%2C+PA" target="_blank" rel="noopener noreferrer" class="sec-more">Directions &rarr;</a>
+      </article>
+      <article class="loc-card">
+        <span class="loc-badge">West Chester</span>
+        <h3 class="loc-name">East Goshen Park</h3>
+        <p class="loc-addr">1661 Paoli Pike, West Chester, PA</p>
+        <p class="loc-desc">Highly rated park (4.8 stars) with confirmed sand courts. Strong parking and facilities. West Chester area players' preferred site.</p>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=East+Goshen+Park%2C+1661+Paoli+Pike%2C+West+Chester%2C+PA" target="_blank" rel="noopener noreferrer" class="sec-more">Directions &rarr;</a>
+      </article>
+      <article class="loc-card">
+        <span class="loc-badge">South County</span>
+        <h3 class="loc-name">Concord Township Park</h3>
+        <p class="loc-addr">43 S. Thornton Rd, Glen Mills, PA</p>
+        <p class="loc-desc">Sand courts at the Concord Township Community Park. Serves Garnet Valley, Media, and Glen Mills corridor athletes.</p>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Concord+Township+Park%2C+43+S+Thornton+Rd%2C+Glen+Mills%2C+PA" target="_blank" rel="noopener noreferrer" class="sec-more">Directions &rarr;</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BOOK ═══════════════════════════════════════════════════════════ -->
+<section class="book" aria-labelledby="book-heading">
+  <div class="wrap">
+    <div class="book-band">
+      <div>
+        <span class="book-label">Ready to train?</span>
+        <h2 id="book-heading">Book your block</h2>
+        <p>Register by the Sunday before your session — no walk-ins. Questions? <a href="https://debvb.github.io/contact.html">Contact the coaches</a>.</p>
+      </div>
+      <div class="book-actions">
+        <a href="https://forms.gle/zLQFsLoHFxz461Mi7" target="_blank" rel="noopener noreferrer" class="btn-navy">Register now</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
-<section class="pricing" id="pricing">
-  <div class="section-inner">
-    <div class="tag">Book a Block</div>
-    <div class="section-h2">Choose Your Format.</div>
-    <div class="pricing-split">
-      <div class="price-panel">
-        <div class="pp-type">Individual · Solo Player</div>
-        <div class="pp-price">$75</div>
-        <div class="pp-unit">Per one-hour block</div>
-        <div class="pp-features">
-          <div class="pp-f">Dedicated one-on-one coaching for the full hour</div>
-          <div class="pp-f">Drill selection tailored to your skill level and position</div>
-          <div class="pp-f">Mon &amp; Wed · 9 AM–Noon · Starting June 8, 2026</div>
-          <div class="pp-f">Exton Park Sand Courts · Register by prior Sunday</div>
-        </div>
-        <a href="https://forms.gle/zLQFsLoHFxz461Mi7" class="pp-cta">Register Now</a>
-      </div>
-      <div class="price-panel">
-        <div class="pp-type">Partner · Two Players</div>
-        <div class="pp-price">$100</div>
-        <div class="pp-unit">Per one-hour block — $50 per player</div>
-        <div class="pp-features">
-          <div class="pp-f">Both players coached simultaneously in the same session</div>
-          <div class="pp-f">Partner chemistry, communication, and shared live game reps</div>
-          <div class="pp-f">Mon &amp; Wed · 9 AM–Noon · Starting June 8, 2026</div>
-          <div class="pp-f">Exton Park Sand Courts · Register by prior Sunday</div>
-        </div>
-        <a href="https://forms.gle/zLQFsLoHFxz461Mi7" class="pp-cta">Register Now</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SCHEDULE -->
-<section class="schedule-section" id="schedule">
-  <div class="section-inner">
-    <div class="tag">Session Times</div>
-    <table class="sched-table">
-      <thead>
-        <tr>
-          <th>Time</th>
-          <th>Block</th>
-          <th>Format</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>9 – 10 AM</td>
-          <td><strong>Block 1</strong></td>
-          <td>Solo or Partner</td>
-        </tr>
-        <tr>
-          <td>10 – 11 AM</td>
-          <td><strong>Block 2</strong></td>
-          <td>Solo or Partner</td>
-        </tr>
-        <tr>
-          <td>11 AM – Noon</td>
-          <td><strong>Block 3</strong></td>
-          <td>Solo or Partner</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- LOCATIONS -->
-<section class="locations" id="locations">
-  <div class="section-inner">
-    <div class="tag">Where We Train</div>
-    <div class="section-h2">Sand Courts Across Chester County.</div>
-    <div class="loc-cards">
-      <div class="lc primary">
-        <div class="lc-badge">🥇 Primary Venue</div>
-        <div class="lc-name">Exton Park</div>
-        <div class="lc-addr">140 Church Farm Ln, Exton, PA</div>
-        <div class="lc-desc">West Whiteland Township sand volleyball court. Closest venue to Downingtown East — your home base for DE:BV summer training.</div>
-      </div>
-      <div class="lc">
-        <div class="lc-badge">🥈 West Chester</div>
-        <div class="lc-name">East Goshen Park</div>
-        <div class="lc-addr">1661 Paoli Pike, West Chester, PA</div>
-        <div class="lc-desc">Highly rated park (⭐ 4.8) with confirmed sand courts. Strong parking and facilities. West Chester area players' preferred site.</div>
-      </div>
-      <div class="lc">
-        <div class="lc-badge">➕ South County</div>
-        <div class="lc-name">Concord Township Park</div>
-        <div class="lc-addr">43 S. Thornton Rd, Glen Mills, PA</div>
-        <div class="lc-desc">Sand courts at the Concord Township Community Park. Serves Garnet Valley, Media, and Glen Mills corridor athletes.</div>
-      </div>
-    </div>
-  </div>
-</section>
+</main>
 
 <footer>
-  <div>
-    <div class="footer-brand">DE:BV</div>
-    <div class="footer-sub">Downingtown East Boys Volleyball · Summer 2026</div>
+  <div class="footer-brand">
+    <img src="https://debvb.github.io/downingtown-east-volleyball-mark.png" alt="Downingtown East Volleyball DE logo" class="footer-logo" loading="lazy" width="47" height="52">
+    <span class="footer-brand-name"><span>Downingtown East</span> <span>Boys Volleyball</span></span>
   </div>
-  <div class="footer-link">
-    Register at <br>
-    <a href="https://forms.gle/zLQFsLoHFxz461Mi7">forms.gle/zLQFsLoHFxz461Mi7</a>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h2>DEVB Clinics</h2>
+      <ul>
+        <li><a href="https://forms.gle/zLQFsLoHFxz461Mi7" target="_blank" rel="noopener noreferrer">Book a block</a></li>
+        <li><a href="#coach">Your coach</a></li>
+        <li><a href="#training">Time slots &amp; skills</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#locations">Locations</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h2>Team Site</h2>
+      <ul>
+        <li><a href="https://debvb.github.io/">Home</a></li>
+        <li><a href="https://debvb.github.io/schedule.html">Schedule</a></li>
+        <li><a href="https://debvb.github.io/roster.html">Roster</a></li>
+        <li><a href="https://debvb.github.io/coaches.html">Coaches</a></li>
+        <li><a href="https://debvb.github.io/contact.html">Contact</a></li>
+        <li><a href="https://debvb.github.io/news.html">News</a></li>
+        <li><a href="https://debvb.github.io/history.html">Program History</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h2>Follow Us</h2>
+      <ul>
+        <li><a href="https://instagram.com/deastboysvb" target="_blank" rel="noopener noreferrer">Instagram @deastboysvb</a></li>
+        <li><a href="https://x.com/devbboys" target="_blank" rel="noopener noreferrer">Twitter @devbboys</a></li>
+        <li><a href="https://fan.hudl.com/usa/pa/exton/organization/13507/downingtown-east-high-school/team/730061/boys-varsity-volleyball" target="_blank" rel="noopener noreferrer">Hudl Highlights</a></li>
+        <li><a href="https://www.maxpreps.com/pa/exton/downingtown-east-cougars/volleyball/boys/" target="_blank" rel="noopener noreferrer">MaxPreps</a></li>
+      </ul>
+    </div>
   </div>
+  <div class="footer-bottom">&copy; <span id="footer-year">2026</span> Downingtown East Boys Volleyball &middot; DEVB Clinics</div>
 </footer>
 
+<script>
+(function() {
+  var yearEl = document.getElementById('footer-year');
+  if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
+
+  var burger = document.getElementById('nav-burger');
+  var drawer = document.getElementById('nav-drawer');
+  var burgerIcon = document.getElementById('burger-icon');
+  var openPath = 'M4 6h16M4 12h16M4 18h16';
+  var closePath = 'M6 18L18 6M6 6l12 12';
+  function setDrawer(isOpen) {
+    drawer.classList.toggle('open', isOpen);
+    burger.setAttribute('aria-expanded', isOpen);
+    burger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    if (burgerIcon) {
+      burgerIcon.querySelector('path').setAttribute('d', isOpen ? closePath : openPath);
+    }
+  }
+  if (burger && drawer) {
+    burger.addEventListener('click', function() {
+      setDrawer(!drawer.classList.contains('open'));
+    });
+    // Links in the drawer are mostly in-page anchors; close it on the way out.
+    drawer.addEventListener('click', function(e) {
+      if (e.target.closest('a')) { setDrawer(false); }
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && drawer.classList.contains('open')) {
+        setDrawer(false);
+        burger.focus();
+      }
+    });
+  }
+})();
+</script>
 </body>
 </html>
